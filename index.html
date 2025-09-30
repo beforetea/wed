@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>长图滚动效果</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头图区域 -->
+        <div class="hero-section">
+            <div class="hero-image">
+                <canvas id="sequence-canvas"></canvas>
+                <div class="title-section">
+                    <img src="title1.png" alt="标题1">
+                </div>
+                <div class="map-section">
+                    <img src="address.png" alt="地址" onclick="openMap()" style="cursor: pointer;">
+                </div>
+                <div class="spacer"></div>
+                <div class="title-section">
+                    <img src="title2.png" alt="标题2">
+                </div>
+                <div class="map-section">
+                    <img src="address2.png" alt="地址2" onclick="openMap2()" style="cursor: pointer;">
+                </div>
+                <div class="spacer-64"></div>
+                <div class="title-section">
+                    <img src="title3.png" alt="标题3">
+                </div>
+                <div class="form-section">
+                    <a href="https://docs.qq.com/form/page/DYmJEVE9OS01iV2FJ" target="_blank" class="form-button">
+                        前往填写参加信息
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        function openMap() {
+            const address = '杭州西溪湿地恐龙坪';
+            const lat = '30.26';
+            const lng = '120.05';
+            
+            window.open(`https://uri.amap.com/marker?position=${lng},${lat}&name=${encodeURIComponent(address)}`, '_blank');
+        }
+        
+        function openMap2() {
+            const address = '杭州西溪北苑文一社区文化家园';
+            const lat = '30.29036';
+            const lng = '120.039';
+            
+            window.open(`https://uri.amap.com/marker?position=${lng},${lat}&name=${encodeURIComponent(address)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
